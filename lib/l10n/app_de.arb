@@ -1,0 +1,23 @@
+{
+  "@@locale": "de",
+  "app_title": "Audio Player",
+  "login": "Einloggen",
+  "username": "Benutzername",
+  "password": "Passwort",
+  "login_button": "Einloggen",
+  "login_success": "Erfolgreich eingeloggt!",
+  "login_failed": "Einloggen fehlgeschlagen",
+  "vodcatalog": "VOD-KATALOG",
+  "login_sub_title": "Entdecken und genießen Sie unbegrenzte Musik",
+  "profile": "Profil",
+  "edit": "Bearbeiten",
+  "followers": "Follower",
+  "following": "Folge ich",
+  "top_songs": "Top-Songs",
+  "toggle_language": "German",
+  "forgot_password": "Forgot your Password?",
+  "sign_up": "Don't have an account? Sign up",
+  "playlists": "Playlists",
+  "downloads": "Downloads",
+  "likes": "Likes"
+}
