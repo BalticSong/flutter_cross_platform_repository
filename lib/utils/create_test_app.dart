@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_android_ios/presentation/view/default_page.dart';
-import 'package:flutter_android_ios/utils/app_localizations.dart';
+import 'package:flutter_cross_platform_poc/presentation/view/default_page.dart';
+import 'package:flutter_cross_platform_poc/utils/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
 

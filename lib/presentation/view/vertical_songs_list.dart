@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_android_ios/data/remote/model/song_model.dart';
-import 'package:flutter_android_ios/utils/app_theme.dart';
+import 'package:flutter_cross_platform_poc/data/remote/model/song_model.dart';
+import 'package:flutter_cross_platform_poc/utils/app_theme.dart';
 
 class VerticalSongsList extends StatelessWidget {
   final List<SongModel> songList;
@@ -20,21 +20,24 @@ class VerticalSongsList extends StatelessWidget {
         itemCount: songList.length,
         itemBuilder: (context, index) {
           return Padding(
-            padding: EdgeInsets.only(left: 8.0,right: 8.0,top: 2.0),
+            padding: EdgeInsets.only(left: 8.0, right: 8.0, top: 2.0),
             child: Container(
               height: 80,
               color: Colors.white,
-              child:  Row(
+              child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  SizedBox(width: 10,), //
+                  SizedBox(
+                    width: 10,
+                  ), //
                   // Image
-                  Image.asset('assets/images/album.png',
-                  height: 50,
-                  width: 50,),
+                  Image.asset(
+                    'assets/images/album.png',
+                    height: 50,
+                    width: 50,
+                  ),
                   SizedBox(width: 10),
-
 
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -47,7 +50,6 @@ class VerticalSongsList extends StatelessWidget {
                       Text(
                         songList[index].title,
                         style: AppTheme.SUB_HEADER_TITLE_STYLE,
-
                       ),
                     ],
                   ),
@@ -57,8 +59,6 @@ class VerticalSongsList extends StatelessWidget {
                     Icons.arrow_right,
                     size: 30,
                   ),
-
-
                 ],
               ),
             ),

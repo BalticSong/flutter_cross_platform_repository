@@ -1,6 +1,6 @@
 // login_usecase.dart
-import 'package:flutter_android_ios/data/remote/model/user_model.dart';
-import 'package:flutter_android_ios/data/repositories/user_repository.dart';
+import 'package:flutter_cross_platform_poc/data/remote/model/user_model.dart';
+import 'package:flutter_cross_platform_poc/data/repositories/user_repository.dart';
 
 
 

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_android_ios/data/remote/model/song_model.dart';
-import 'package:flutter_android_ios/presentation/view/video_player_view.dart';
-import 'package:flutter_android_ios/utils/app_theme.dart';
+import 'package:flutter_cross_platform_poc/data/remote/model/song_model.dart';
+import 'package:flutter_cross_platform_poc/presentation/view/video_player_view.dart';
+import 'package:flutter_cross_platform_poc/utils/app_theme.dart';
 
 class HorizontalSongsList extends StatelessWidget {
   final List<SongModel> songList;

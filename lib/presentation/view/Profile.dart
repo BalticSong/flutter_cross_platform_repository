@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_android_ios/data/remote/model/song_model.dart';
-import 'package:flutter_android_ios/data/remote/model/user_model.dart';
-import 'package:flutter_android_ios/presentation/view/vertical_songs_list.dart';
-import 'package:flutter_android_ios/utils/app_localizations.dart';
-import 'package:flutter_android_ios/utils/app_theme.dart';
-import 'package:flutter_android_ios/utils/custom_tab_bar.dart';
+import 'package:flutter_cross_platform_poc/data/remote/model/song_model.dart';
+import 'package:flutter_cross_platform_poc/data/remote/model/user_model.dart';
+import 'package:flutter_cross_platform_poc/presentation/view/vertical_songs_list.dart';
+import 'package:flutter_cross_platform_poc/utils/app_localizations.dart';
+import 'package:flutter_cross_platform_poc/utils/app_theme.dart';
+import 'package:flutter_cross_platform_poc/utils/custom_tab_bar.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

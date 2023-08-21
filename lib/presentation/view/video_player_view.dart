@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_android_ios/presentation/viewmodel/video_player_view_model.dart';
-import 'package:flutter_android_ios/utils/app_theme.dart';
-import 'package:flutter_android_ios/utils/custom_tab_bar.dart';
+import 'package:flutter_cross_platform_poc/presentation/viewmodel/video_player_view_model.dart';
+import 'package:flutter_cross_platform_poc/utils/app_theme.dart';
+import 'package:flutter_cross_platform_poc/utils/custom_tab_bar.dart';
 import 'package:provider/provider.dart';
 import 'package:video_player/video_player.dart';
 
 class VideoPlayerView extends StatelessWidget {
+  static const route = 'video_player_view';
   final String videoUrl;
 
   const VideoPlayerView({required this.videoUrl});
@@ -15,30 +16,29 @@ class VideoPlayerView extends StatelessWidget {
     return ChangeNotifierProvider<VideoPlayerViewModel>(
       create: (_) => VideoPlayerViewModel()..initializeVideo(videoUrl),
       builder: (context, _) {
-
         return SafeArea(
           child: DefaultTabController(
               length: 4, // Number of tabs
-              child:Scaffold(
-              appBar: AppBar(
-                title: Text('Video Player'),
-              ),
-              body: SingleChildScrollView(
-                child: Padding(
-                  padding: const EdgeInsets.all(AppTheme.SIZEBOX_HEIGHT_xxSMALL),
-                  child: Column(
-                    // mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      PlayVideo(),
-                      const SizedBox(height: AppTheme.SIZEBOX_HEIGHT_xxSMALL),
-                      VolumeSlider(),
-                    ],
+              child: Scaffold(
+                appBar: AppBar(
+                  title: Text('Video Player'),
+                ),
+                body: SingleChildScrollView(
+                  child: Padding(
+                    padding:
+                        const EdgeInsets.all(AppTheme.SIZEBOX_HEIGHT_xxSMALL),
+                    child: Column(
+                      // mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        PlayVideo(),
+                        const SizedBox(height: AppTheme.SIZEBOX_HEIGHT_xxSMALL),
+                        VolumeSlider(),
+                      ],
+                    ),
                   ),
                 ),
-              ),
-              bottomNavigationBar: CustomTabBar(),
-              )
-          ),
+                bottomNavigationBar: CustomTabBar(),
+              )),
         );
       },
     );
@@ -91,24 +91,27 @@ class PlayVideo extends StatelessWidget {
             ],
           ),
         ),
-      
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             IconButton(
-              icon: Icon(Icons.rotate_left,size: 40,),
+              icon: Icon(
+                Icons.rotate_left,
+                size: 40,
+              ),
               onPressed: () {
                 // Play previous video logic
               },
             ),
             IconButton(
-              icon: Icon(viewModel.isPlaying ? Icons.pause : Icons.play_arrow,size: 40),
+              icon: Icon(viewModel.isPlaying ? Icons.pause : Icons.play_arrow,
+                  size: 40),
               onPressed: () {
                 viewModel.playPause();
               },
             ),
             IconButton(
-              icon: Icon(Icons.rotate_right,size: 40),
+              icon: Icon(Icons.rotate_right, size: 40),
               onPressed: () {
                 // Play next video logic
               },
@@ -118,12 +121,13 @@ class PlayVideo extends StatelessWidget {
       ],
     );
   }
+
   String _formatDuration(Duration duration) {
     // Format the duration to display as hh:mm:ss
     String twoDigits(int n) => n.toString().padLeft(2, '0');
     String twoDigitMinutes = twoDigits(duration.inMinutes.remainder(60));
     String twoDigitSeconds = twoDigits(duration.inSeconds.remainder(60));
-    if(twoDigits(duration.inHours)=='00'){
+    if (twoDigits(duration.inHours) == '00') {
       return "$twoDigitMinutes:$twoDigitSeconds";
     }
     return "${twoDigits(duration.inHours)}:$twoDigitMinutes:$twoDigitSeconds";
@@ -136,10 +140,10 @@ class VolumeSlider extends StatelessWidget {
     final viewModel = Provider.of<VideoPlayerViewModel>(context);
     final volume = viewModel.volume;
 
-    return    Row(
+    return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Icon(Icons.volume_mute,size: 20),
+        Icon(Icons.volume_mute, size: 20),
         Expanded(
           child: Slider(
             value: volume,
@@ -148,8 +152,7 @@ class VolumeSlider extends StatelessWidget {
             },
           ),
         ),
-        Icon(Icons.volume_up,size: 20),
-
+        Icon(Icons.volume_up, size: 20),
       ],
     );
   }

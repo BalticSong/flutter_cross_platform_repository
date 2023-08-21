@@ -1,9 +1,9 @@
 // login_page.dart
 import 'package:flutter/material.dart';
-import 'package:flutter_android_ios/presentation/view/home_page.dart';
-import 'package:flutter_android_ios/presentation/viewmodel/login_viewmodel.dart';
-import 'package:flutter_android_ios/utils/app_localizations.dart';
-import 'package:flutter_android_ios/utils/app_theme.dart';
+import 'package:flutter_cross_platform_poc/presentation/view/home_page.dart';
+import 'package:flutter_cross_platform_poc/presentation/viewmodel/login_viewmodel.dart';
+import 'package:flutter_cross_platform_poc/utils/app_localizations.dart';
+import 'package:flutter_cross_platform_poc/utils/app_theme.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 

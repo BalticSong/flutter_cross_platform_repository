@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_android_ios/data/remote/model/user_model.dart';
-import 'package:flutter_android_ios/presentation/view/Profile.dart';
-import 'package:flutter_android_ios/presentation/view/default_page.dart';
-import 'package:flutter_android_ios/presentation/view/video_view.dart';
-import 'package:flutter_android_ios/utils/app_localizations.dart';
-import 'package:flutter_android_ios/utils/custom_tab_bar.dart';
+import 'package:flutter_cross_platform_poc/data/remote/model/user_model.dart';
+import 'package:flutter_cross_platform_poc/presentation/view/Profile.dart';
+import 'package:flutter_cross_platform_poc/presentation/view/default_page.dart';
+import 'package:flutter_cross_platform_poc/presentation/view/video_view.dart';
+import 'package:flutter_cross_platform_poc/utils/app_localizations.dart';
+import 'package:flutter_cross_platform_poc/utils/custom_tab_bar.dart';
 import 'package:provider/provider.dart';
 
 class HomePage extends StatefulWidget {
@@ -57,6 +57,7 @@ class _HomePageState extends State<HomePage>
                           ),
                           actions: <Widget>[
                             InkWell(
+                              key: Key('profile_button'),
                               onTap: () {
                                 Navigator.push(
                                   context,

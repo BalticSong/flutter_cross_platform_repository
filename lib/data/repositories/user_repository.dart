@@ -1,6 +1,6 @@
 // repository.dart
-import 'package:flutter_android_ios/data/remote/api_service.dart';
-import 'package:flutter_android_ios/data/remote/model/user_model.dart';
+import 'package:flutter_cross_platform_poc/data/remote/api_service.dart';
+import 'package:flutter_cross_platform_poc/data/remote/model/user_model.dart';
 
 
 class UserRepository {
